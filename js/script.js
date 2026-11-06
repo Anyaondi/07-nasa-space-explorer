@@ -28,4 +28,5 @@ async function getSpaceImages(startDate, endDate) {
   } catch (error) {
     console.error("Error:", error);
   }
+getSpaceImages(startInput.value, endInput.value);
 }
