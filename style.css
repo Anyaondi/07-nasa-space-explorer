@@ -142,3 +142,140 @@ button:hover {
   font-size: 48px;
   margin-bottom: 20px;
 }
+
+/* Random Space Fact */
+.space-fact {
+  background: #102a50;
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* NASA Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* Space Cards */
+.space-card {
+  background: #14213d;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 0 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.space-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.space-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Extra Credit: Hover Zoom */
+.space-card:hover img {
+  transform: scale(1.08);
+}
+
+.space-card h3 {
+  margin: 15px 10px 5px;
+  font-size: 18px;
+}
+
+.space-card p {
+  margin: 5px;
+  color: #cbd5e1;
+}
+
+/* Video Entries */
+.video-placeholder {
+  height: 200px;
+  background: #243b65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* Modal Overlay */
+.modal:not([hidden]) {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #101c35;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 750px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.modal-content p {
+  line-height: 1.7;
+}
+
+.modal-content a {
+  color: #8ecaff;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
